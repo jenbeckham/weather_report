@@ -1,4 +1,5 @@
-require "./forecast.rb"
-require "./hurricanes.rb"
-require "./alerts.rb"
-require "./conditions.rb"
+require './alerts.rb'
+require './hurricanes.rb'
+require './conditions.rb'
+require './forecast.rb'
+require 'httparty'
