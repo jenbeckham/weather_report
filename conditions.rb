@@ -12,7 +12,7 @@ class Conditions
   end
 
   def temp_f
-    puts "The current temperature is #{@conditionspage["current_observation"]["temp_f"]} in #{@location_name}"
+    puts "The current temperature is #{@conditionspage["current_observation"]["temp_f"]}F in #{@location_name}"
   end
 
   def weather
@@ -20,12 +20,15 @@ class Conditions
   end
 
   def wind_speeds
-    puts "The wind in #{@location_name} is #{@conditionspage["current_observation"]["wind_mph"]}mph
-    with gusts of #{@conditionspage["current_observation"]["wind_gust-mph"]}mph"
+    if @conditionspage["current_observation"]["wind_gust-mph"] == "0"
+      puts "The wind in #{@location_name} is #{@conditionspage["current_observation"]["wind_mph"]}mph"
+    else
+      puts "The wind in #{@location_name} is #{@conditionspage["current_observation"]["wind_mph"]}mph with gusts of #{@conditionspage["current_observation"]["wind_gust-mph"]}mph"
+    end
   end
 
   def humidity
-    puts "The humidity in #{@location_name} is #{@conditionspage["current_observation"]["relative_humidity"]}"
+    puts "The humidity in #{@location_name} is #{@conditionspage["current_observation"]["relative_humidity"]}F"
   end
 
   def feels_like
