@@ -33,23 +33,13 @@ class WeatherTest < Minitest::Test
   #   assert current_conditions.feels_like
   # end
   #
-  # def test_07_10_day_forecast_class_exist
+  # # def test_07_10_day_forecast_class_exist
   #   assert Forecast10.new(27615)
   # end
   #
-  def test_08_10_week_forecast
-    this_week = Forecast10.new(27611)
-    this_week.forecast
-  end
-
-  # def test_09_10_daytime_forecast
-  #   next_week = Forecast10.new(89103)
-  #   assert next_week.daytime_forcast
-  # end
-
-  # def test_10_10_nighttime_forecast
-  #   all_week = Forecast10.new(30306)
-  #   assert all_week.nighttime_forcast
+  # def test_08_10_week_forecast
+  #   this_week = Forecast10.new(27611)
+  #   this_week.forecast
   # end
   #
   # def test_11_sun_times_class_exist
@@ -84,14 +74,33 @@ class WeatherTest < Minitest::Test
   #   assert Alerts.new(27615)
   # end
   #
-  # def test_19_hurricanes_class_exist
-  #   assert Hurricanes.new
+  # def test_hurricanes_class_exist
+  #   now = Hurricanes.new(27605)
   # end
   #
-  # def test_20_hurricane_location
+  # def test_hurricanes_name
+  #   now = Hurricanes.new(27605)
+  #   assert now.hurricane_name
   # end
   #
-  # def test_21_hurricane_class
+  # def test_hurricanes_category
+  #   now = Hurricanes.new(27605)
+  #   assert now.hurricane_category
+  # end
+  #
+  # def test_hurricanes_windspeed
+  #   now = Hurricanes.new(27605)
+  #   assert now.hurricane_wind_speed
+  # end
+  #
+  # def test_hurricane_time
+  #   now = Hurricanes.new(27605)
+  #   assert now.hurricane_time
+  # end
+  #
+  # def test_hurricane_info
+  #   now = Hurricanes.new
+  #   p now.hurricane_info
   # end
 
 end

@@ -9,25 +9,8 @@ class Forecast10
   def forecast
     count = 0
     while count < 20
-      p "#{@forecast10page["forecast"]["txt_forecast"]["forecastday"][count]["title"]} weather: #{@forecast10page["forecast"]["txt_forecast"]["forecastday"][count]["fcttext"]}"
+      return "#{@forecast10page["forecast"]["txt_forecast"]["forecastday"][count]["title"]} weather: #{@forecast10page["forecast"]["txt_forecast"]["forecastday"][count]["fcttext"]}"
       count += 1
     end
   end
-
-  # def forecast_description
-  #   @description = @forecast10page["forecast"]["txt_forecast"]["forecastday"][4]["fcttext"]
-  # end
-  #
-  # def next_10_day_forecast
-  #   @forecast10page.each do |i|
-  #     puts "#{@day} will #{@description}"
-  #   end
-  # end
-  #
-  # def day_or_night_forecast
-  #   @forecast10page.map {|i| i["forecast"]["txt_forecast"]["forecastday"]["period"] == 2%0}
-  #   puts "Your daytime weather on #{@day} looks #{@description.downcase}"
-  # end
-
-
 end
