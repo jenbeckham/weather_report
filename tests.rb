@@ -86,14 +86,15 @@ class WeatherTest < Minitest::Test
     assert_equal "Sunrise at 6:03a.m. Sunset at 8:20p.m.", sun.suntime
   end
 
-  def test_14_number_of_alerts
+  def test_12_number_of_alerts
     assert_equal 1, Alerts.new(27607).number_of_alerts
   end
-  #
-  # def test_16_alert_info
-  #   assert Alerts.new(zipcode)
-  # end
-  #
+
+  def test_13_alert_info
+    alert = Alerts.new(27607)
+    assert_equal "Current time is 4:03 PM CDT on May 25, 2015", alert.alert_info
+  end
+
   # def test_17_alert_date
   #   assert Alerts.new(27607)
   # end

@@ -20,15 +20,16 @@ class Alerts
   end
 
   def alert_info
-    count = @number_of_alerts
-    if count == 0
-      return "No alerts at this time"
+    # count = self.number_of_alerts.to_i
+    # self.individual_alert
+
+    if self.number_of_alerts.to_i == 0
+      "No alerts at this time"
     else
-      until count  == 0
-        @alert_page.each do
-          return "Current time is #{@individual_alert[count]["date"]}. #{@individual_alert[count]["message"]}."
-          count -= 1
-        end
+      count = 0
+      self.individual_alert.each do
+      return "Current time is #{self.individual_alert[count]["date"]}" #a["alerts"][count]["message"]}."
+      count += 1
       end
     end
   end
