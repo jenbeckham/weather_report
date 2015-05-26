@@ -31,8 +31,10 @@ class Hurricanes
     if @hurricane_page["response"]["features"] == {}
       return "Currently no hurricanes"
     else
+      count = 0
       @hurricane_page.each do
-      return "#{@hurricane_page["currenthurricane"][0]["stormInfo"]["stormName"]} is a category #{@hurricane_page["currenthurricane"][0]["Current"]["SaffirSimpsonCategory"]}. With wind speeds of #{@hurricane_page["currenthurricane"][0]["Current"]["WindSpeed"]["Mph"]}mph at #{@hurricane_page["currenthurricane"][0]["Current"]["Time"]["pretty"]}."
+      return "#{@hurricane_page["currenthurricane"][count]["stormInfo"]["stormName"]} is a category #{@hurricane_page["currenthurricane"][count]["Current"]["SaffirSimpsonCategory"]}. With wind speeds of #{@hurricane_page["currenthurricane"][count]["Current"]["WindSpeed"]["Mph"]}mph at #{@hurricane_page["currenthurricane"][count]["Current"]["Time"]["pretty"]}."
+      count += 1
       end
     end
   end

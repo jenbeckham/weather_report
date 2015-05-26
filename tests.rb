@@ -95,41 +95,33 @@ class WeatherTest < Minitest::Test
     assert_equal "Current time is 4:03 PM CDT on May 25, 2015", alert.alert_info
   end
 
-  # def test_17_alert_date
-  #   assert Alerts.new(27607)
-  # end
-  #
-  # def test_18_alerts_expires
-  #   assert Alerts.new(27615)
-  # end
-  #
-  # def test_hurricanes_class_exist
-  #   now = Hurricanes.new(27605)
-  # end
-  #
-  # def test_hurricanes_name
-  #   now = Hurricanes.new(27605)
-  #   assert now.hurricane_name
-  # end
-  #
-  # def test_hurricanes_category
-  #   now = Hurricanes.new(27605)
-  #   assert now.hurricane_category
-  # end
-  #
-  # def test_hurricanes_windspeed
-  #   now = Hurricanes.new(27605)
-  #   assert now.hurricane_wind_speed
-  # end
-  #
-  # def test_hurricane_time
-  #   now = Hurricanes.new(27605)
-  #   assert now.hurricane_time
-  # end
-  #
-  # def test_hurricane_info
-  #   now = Hurricanes.new
-  #   p now.hurricane_info
-  # end
+  def test_hurricanes_class_exist
+    now = Hurricanes.new
+  end
+
+  def test_hurricanes_name
+    now = Hurricanes.new
+    assert_equal "91E", now.hurricane_name
+  end
+
+  def test_hurricanes_category
+    now = Hurricanes.new
+    assert_equal -4, now.hurricane_category
+  end
+
+  def test_hurricanes_windspeed
+    now = Hurricanes.new
+    assert_equal 30, now.hurricane_wind_speed
+  end
+
+  def test_hurricane_time
+    now = Hurricanes.new
+    assert_equal "2:00 PM EDT on May 25, 2015", now.hurricane_time
+  end
+
+  def test_hurricane_info
+    now = Hurricanes.new
+    assert_equal "91E is a category -4. With wind speeds of 30mph at 2:00 PM EDT on May 25, 2015.", now.hurricane_info
+  end
 
 end
