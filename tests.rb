@@ -33,7 +33,6 @@ class Conditions
   end
 end
 
-
 class WeatherTest < Minitest::Test
   def test_01_conditions_class_exist
     assert Conditions.new(27607)
@@ -68,23 +67,24 @@ class WeatherTest < Minitest::Test
     current_conditions = Conditions.new(27607)
     assert_equal "The current temperature is 82.1F in Raleigh, NC, but feels like 82F. Its Partly Cloudy with a humidity of 44%. Winds are 0.0mph with gusts of 1.0mph", current_conditions.current_info
   end
-  #
-  # # def test_07_10_day_forecast_class_exist
-  #   assert Forecast10.new(zipcode)
-  # end
-  #
-  # def test_08_10_week_forecast
-  #   this_week = Forecast10.new(zipcode)
-  #   this_week.forecast
-  # end
-  #
-  # def test_11_sun_times_class_exist
-  #   assert Suntimes.new(zipcode)
-  # end
-  #
-  # def test_12_times
-  #   assert Suntimes.new(zipcode)
-  # end
+
+  def test_08_10_day_forecast_class_exist
+    assert Forecast10.new(27607)
+  end
+
+  def test_09_10_week_forecast
+    this_week = Forecast10.new(27607)
+    assert this_week.forecast
+  end
+
+  def test_10_sun_times_class_exist
+    assert Suntimes.new(27607)
+  end
+
+  def test_11_times
+    sun = Suntimes.new(27607)
+    assert_equal "Sunrise at 6:03a.m. Sunset at 8:20p.m.", sun.suntime
+  end
 
   def test_14_number_of_alerts
     assert_equal 1, Alerts.new(27607).number_of_alerts

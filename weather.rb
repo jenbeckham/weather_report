@@ -6,17 +6,14 @@ puts "Would you like to know your current weather conditions?(y/n)"
     puts "What is your zipcode?"
     zipcode = gets.chomp
     Conditions.new(zipcode) = conditions
-    p conditions.temp_f
-    p conditions.weather
-    p conditions.wind_speeds
-    p conditions.humidity
-    p conditions.feels_like
+    p conditions.current_info
   end
 
 puts "What about your local 10 day forecast(y/n)"
   user_input_2 = gets.chomp
   if user_input_2 == "y"
-    Forecast10.new(zipcode).forecast
+    Forecast10.new(zipcode) =forecast
+    .forecast
   end
 
 puts "What about your local weather alerts?(y/n)"

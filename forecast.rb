@@ -3,7 +3,7 @@ require './requires.rb'
 class Forecast10
   attr_reader :zipcode
   def initialize(zipcode)
-    @zipcode = (zipcode)
+    @zipcode = zipcode
     @forecast10page = get_data
   end
 
