@@ -1,0 +1,109 @@
+
+{
+  "response": {
+  "version":"0.1",
+  "termsofService":"http://www.wunderground.com/weather/api/d/terms.html",
+  "features": {
+  "alerts": 1
+  }
+	}
+		,"query_zone": "025",
+	"alerts": [
+		{
+		"type": "TOW",
+		"description": "Tornado Watch",
+		"date": "4:03 PM CDT on May 25, 2015",
+		"date_epoch": "1432587780",
+		"expires": "6:00 PM CDT on May 25, 2015",
+		"expires_epoch": "1432594800",
+		"tz_short":"CDT",
+		"tz_long":"America/Chicago",
+		"message": "\u000ATornado Watch 211 remains in effect until 600 PM CDT for the \u000Afollowing locations\u000A\u000A\u000AOK \u000A. Oklahoma counties included are\u000A\u000AAtoka Bryan Carter \u000ACleveland Coal Garvin \u000AHughes Johnston Love \u000AMcClain Marshall Murray \u000AOklahoma Pontotoc Pottawatomie \u000ASeminole \u000A\u000A\u000A\u000A\u000A",
+		"phenomena": "TO",
+		"significance": "A",
+		"ZONES": [
+		{
+		"state":"OK",
+		"ZONE":"048"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"052"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"046"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"029"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"043"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"040"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"032"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"047"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"050"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"028"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"051"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"041"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"025"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"042"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"030"
+		}
+		,
+		{
+		"state":"OK",
+		"ZONE":"031"
+		}
+		],
+		"StormBased": {
+		}
+		}
+	]
+}

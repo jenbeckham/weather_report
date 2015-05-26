@@ -4,7 +4,11 @@ class Hurricanes
   attr_reader :hurricane_page
   def initialize#(zipcode)
     # @zipcode = zipcode
-    @hurricane_page = HTTParty.get("http://api.wunderground.com/api/#{ENV["WUNDERGROUND_KEY"]}/currenthurricane/view.json")
+    @hurricane_page = get_data
+  end
+
+  def get_data
+    HTTParty.get("http://api.wunderground.com/api/#{ENV["WUNDERGROUND_KEY"]}/currenthurricane/view.json")
   end
 
   def hurricane_name
